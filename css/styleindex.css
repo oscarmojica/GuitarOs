@@ -1,0 +1,2262 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* =========================================== */
+/* ============== BACKGROUND BODY ============ */
+html {
+    scroll-behavior: smooth;
+}
+/* ============================================ */
+/* ================== BARRA DE SCROLL ================== */
+/*html::-webkit-scrollbar {
+    width: 20px;
+}
+html::-webkit-scrollbar-track {
+    background: #d8d6d4bd;
+}
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #66554e, #e0d9d5, #66554e);
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px #191919;
+}
+*/
+
+body {
+    background: #eae7e7;
+	background-image: url('../img/guitars2-1.png');
+    background-attachment: fixed;
+}
+
+html::-webkit-scrollbar {
+    width: 20px;
+}
+html::-webkit-scrollbar-track {
+    background: #ecebe9a4;
+    border-radius: 3rem;
+}
+html::-webkit-scrollbar-thumb {
+    background-image: url('../img/logo9.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+
+/* ========= SECCION SLIDER Y LOGO =========== */
+.presenta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background: transparent;
+    padding: 120px 20px 40px;
+    margin: 30px 0px 0px;
+}
+
+/* =============== FONDO LOGO IMAGEN =============== */
+.facel {
+    width: 200px;
+    height: 200px;
+    background: transparent;
+}
+
+/* =============== IMAGEN LOGO =============== */
+.presenta .content img {
+    width: 100%;
+    height: 100%;
+    transition: .5s ;
+}
+.presenta .content img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(10px 5px 4px #abaaaa);
+}
+
+/*============================================*/
+/*============= SLIDER =======================*/
+.slider {
+	/* background: #0632f8; */
+	width: 80vh;
+	height: 200px;
+	overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #848282;
+}
+.slider .slide-track {
+	display: flex;
+	animation: scroll 40s linear infinite;
+	width: calc(200px * 14);
+}
+.slider .slide {
+	width: 100px;
+}
+.slider .slide img {
+	width: 100%;
+    height: 200px;
+}
+.box .card {
+    position: relative;
+    background: transparent;
+    width: 200px;
+    min-height: 10px;
+	display: flex;
+	background: transparent;
+}
+@media (max-width: 1200px) {
+    .presenta {
+        width: calc(100% - 40px);
+    }
+    .slider {
+        width: calc(100% - 40px);
+    }
+}
+@media (max-width: 768px) {
+    .presenta {
+        width: calc(75% - 30px);
+    }
+    .slider {
+        width: calc(75% - 30px);
+    }
+}
+@media (max-width: 480px) {
+    .presenta {
+        width: calc(100% - 30px);
+    }
+    .slider {
+        width: calc(50% - 30px);
+    }
+}
+
+
+/* ============================================= */
+/* ================= BUSQUEDA ================== */
+.inputBusq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    margin-top: 3px;
+    padding: 5px;
+    top: 0px;
+}
+.inputBusq input {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    height: 30px;
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    border: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.inputBusq input:hover {
+    transform: scale(1.1);
+}
+.inputBusq .busq {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #ce590b;
+    color: #04006c;
+    width: 50px;
+    height: 30px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+#busq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 1;
+    top: 80px;
+    left: 50px;
+    transition: .5s ease;
+}
+#busq:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    background: #8a3d0a;
+    width: 25px;
+}
+
+/* ============================================= */
+/* ============= MENU ENCABEZADO ================ */
+
+.enlaces {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	height: 65px;
+	background: #4d4742;
+}
+.enlaces > li {
+    float: left;
+}
+.enlaces li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px; 
+}
+.enlaces li:hover > ul {
+    display: block;
+}
+
+/* ===========================================  */
+/* =========== ENLACES DEL MENU =============== */
+.enlaces a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+    transition: .5s ease-in-out;
+}
+.enlaces a:hover {
+	background: transparent;
+	color: #df6c1a;
+    transform: scale(1.1);
+}
+#navegacion {
+	display: flex;
+	justify-content: flex-start;
+	margin: 0px;
+	width: 40%;
+	height: 60px;
+    padding: 4px;
+}
+li {
+    padding: 15px;
+}
+
+/* ==================== HOME ================== */
+li a:hover,
+li a.active {
+    color: #de7a32;
+}
+.navegacion a {
+	padding: 1px;
+}
+
+/* ============================================ */
+/* ============= ENLACES ANIMACION ============ */
+.enlace {
+	overflow: hidden;
+	font: 500;
+	display: inline-block;
+	position: relative;
+}
+.enlace:after {
+	content: '';
+	position: absolute;
+	width: 80%;
+	height: 4px;
+	bottom: 10px;
+	left: 10px;
+	background-color: #c3580b;
+	border-radius: 0px 0px 0px 1px; 
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.6s ease-out;
+}
+.enlace:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+.enlace:target .submenu {
+	max-height: 100px;
+}
+
+/* =========================================== */
+/* ============= SUBMENU ARREGLOS ============ */
+.submenu {
+	/* max-height: 0; */
+	transition: 4s;
+	padding: 20px 1px 1px 0px;
+    transition: transform 0.6s ease-out;;
+}
+.submenu:hover {
+    background: transparent;
+    transform: scaleX(1);
+	/* transform-origin: bottom left; */
+    width: 100%;
+    height: 450px;
+}
+.submenu .sub {
+    padding: 1px;
+    align-items: center;
+    color: #4d4742;
+    background: transparent;
+}
+.submenu .sub:hover {
+    width: 100%;
+    box-shadow: 1px 3px 1px 0px #c3580b;
+	border-radius: 1px 0px 10px 0px;
+    background: #6a6460;
+    color: #fff;
+}
+
+/* ============================================= */
+/* =========== TARJETAS DE PRODUCTOS =========== */
+
+#container {
+	display: flex;
+	justify-content: center; 
+    background: transparent;
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+}
+.card .Face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .7s;
+}
+.card .Front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #434343;
+}
+.card .Front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .Front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: #00000066;
+    text-align: center;    
+}
+.card .Back {
+    transform: perspective(600px) rotateY(180deg);
+    background: linear-gradient(55deg, #6c2c00, #c3580b, #d9bca1, #d9bca1, #c3580b, #6c2c00);
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+.card .Back .link {
+    border-top: solid 1px #2c2b2b;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* =========================================== */
+/* ============ REVERSO TARJETA ============== */
+.card a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+.link:hover {
+    transform: scale(1.1);
+}
+.card .Back h3 {
+    font-size: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;/*Parrafo reverso tarjeta*/
+}
+.card .Back p {
+    letter-spacing: 1px;
+	font-size: 15px;
+}
+.card:hover .Front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .Back {
+    transform: perspective(600px) rotateY(360deg);
+}
+.product {
+    font-size: 1rem;
+    transition: .5s ease;
+}
+.product:hover { 
+    transform: scale(1.5);
+}
+#map {
+    color: #fff;
+    font-size: 2rem;
+    transition: .5s;
+}
+#map:hover {
+    transform: scale(2);
+}
+
+
+/* ============================================ */
+/* =========== CATALOGO PRODUCTOS ============= */
+.catalogo-cuerdas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin-top: 30px;
+    /* background: #20ff03; */
+}
+
+.catalogo-cuerdas .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: transparent;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #434343;
+}
+.catalogo-cuerdas:hover .box {
+    transform: rotateY(25deg);
+}
+.catalogo-cuerdas .box:hover ~ .box{
+    transform: rotateY(-25deg);
+}
+.catalogo-cuerdas .box:hover {
+    transform: rotateY(0deg)scale(1.2);
+    z-index: 1;
+    box-shadow: 0 25px 40px #00000080;
+}
+.catalogo-cuerdas .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+/* =========== COLOR DE TARJETA ======== */
+.catalogo-cuerdas .box .imgBx:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(180deg, #ce5b0e8f, #282828);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+    border-radius: 17px;
+}
+
+.catalogo-cuerdas .box:hover .imgBx:before {
+    opacity: 1;
+}
+
+/* ============= CONTENEDOR IMAGEN ============== */
+.catalogo-cuerdas .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 17px;
+    /* object-fit: cover; */
+}
+
+.catalogo-cuerdas .box .prcs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+/* ============= INFORMACION ============== */
+.catalogo-cuerdas .box .prcs .info-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ce590ba3;
+    color: #fff;
+    text-shadow: 0 3px 5px #51403398;
+    width: 90px;
+    height: 8px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+    font-size: 6px;
+    padding: 10px;
+    border-radius: 15px 0px 15px 0px;
+    transform: translateY(200px);
+    box-shadow: 0 5px 5px #51403398;
+}
+
+.catalogo-cuerdas .box:hover .prcs .info-a {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+/* ============= PRODUCTO ============== */
+.catalogo-cuerdas .box .prcs h2 {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 19px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-cuerdas .box:hover .prcs h2 {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 5px #fff;
+}
+
+/* ============= AHORRO ============== */
+.catalogo-cuerdas .box .prcs .ahorro {
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    padding: 6px;
+    font-size: 11px;
+    transform: translateY(200px);
+    color: transparent;
+    border-radius: 5px;
+
+}
+.catalogo-cuerdas .box:hover .prcs .ahorro {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    width: 80px;
+    background: #f53232;
+    color: #fff;
+    box-shadow: 0px 2px 10px #f53232;
+}
+
+/* ============= VALOR EN PESOS ============== */
+.catalogo-cuerdas .box .prcs .pesos {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-cuerdas .box:hover .prcs .pesos {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= VALOR ANTERIOR ============== */
+.catalogo-cuerdas .box .prcs .antr {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-cuerdas .box:hover .prcs .antr {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #d4d0d0;
+}
+
+/* ============= MARCA DE GUITARRA ============== */
+.catalogo-cuerdas .box .prcs .marca {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding: 10px;
+    letter-spacing: 2px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalogo-cuerdas .box:hover .prcs .marca {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+    opacity: 1;
+}
+
+/* ============= DESCRIPCION PRODUCTO ============ */
+.catalogo-cuerdas .box .prcs .dcrp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalogo-cuerdas .box:hover .prcs .dcrp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= DISPONIBLE ============== */
+.catalogo-cuerdas .box .prcs .disp{
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);   
+}
+
+.catalogo-cuerdas .box:hover .prcs .disp{
+    color: #20ff03;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    text-decoration: none;
+    text-shadow: 1px 0px 7px #20ff03;
+}
+
+/* ============= NO DISPONIBLE ============== */
+.catalogo-cuerdas .box .prcs .nodisp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+}
+.catalogo-cuerdas .box:hover .prcs .nodisp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #dd9269;
+    text-shadow: 1px 0px 7px #fd5e08;
+}
+
+/* ============= CARRITO DE COMPRAS ============== */
+.box .prcs .carrito {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: transparent;
+    color: #fff;
+    width: 200px;
+    height: 30px;
+    font-size: 40px;
+    text-decoration: none;
+    transform: translateY(200px);
+    transition: 0.5s;
+    filter: drop-shadow(0 2px 5px #fff);
+}
+
+.box:hover .prcs .carrito {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+
+/* ========== TEXTO GUITARRAS ========== */
+#catalg-guitar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #20ff03; */
+    width: 100%;
+    height: 80px;
+    /* margin: auto; */
+    margin-top: 30px;
+
+}
+.cataguitar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #635041a1;
+    text-shadow: 0px 0px 5px #6c2c00;
+    width: 90%;
+    height: 70px;
+    font-size: 4rem;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.cataguitar:hover {
+    transform: scaleY(1.2);
+}
+/* ========== TEXTO BAJOS ========== */
+#catalg-bajos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.catabajo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.catabajo:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO VIOLINES ========== */
+#catalg-violines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.violines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.violines:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO VIOLONCHELOS ========== */
+#catalg-violonchelo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.violonch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.violonch:hover {
+    transform: scaleY(1.2);
+}
+
+
+/* ============================================ */
+/* =============== TEXTO INST PERCUSION ============== */
+.catalogo-percu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin-top: 40px;
+}
+
+.catalogo-percu .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: transparent;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #434343;
+}
+.catalogo-percu:hover .box {
+    transform: rotateY(25deg);
+}
+.catalogo-percu .box:hover ~ .box{
+    transform: rotateY(-25deg);
+}
+.catalogo-percu .box:hover {
+    transform: rotateY(0deg) scale(1.2);
+    z-index: 1;
+    box-shadow: 0 25px 40px #00000080;
+}
+.catalogo-percu .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+/* =========== COLOR DE TARJETA ======== */
+.catalogo-percu .box .imgBx:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(180deg, #ce5b0e8f, #282828);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+    border-radius: 17px;
+}
+
+.catalogo-percu .box:hover .imgBx:before {
+    opacity: 1;
+}
+
+/* ============= CONTENEDOR IMAGEN ============== */
+.catalogo-percu .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 17px;
+    /* object-fit: cover; */
+}
+
+.catalogo-percu .box .prcs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+/* ============= INFORMACION ============== */
+.catalogo-percu .box .prcs .info-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ce590ba3;
+    color: #fff;
+    text-shadow: 0 3px 5px #51403398;
+    width: 90px;
+    height: 8px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+    font-size: 6px;
+    padding: 10px;
+    border-radius: 15px 0px 15px 0px;
+    transform: translateY(200px);
+    box-shadow: 0 5px 5px #51403398;
+}
+
+.catalogo-percu .box:hover .prcs .info-a {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+/* ============= PRODUCTO ============== */
+.catalogo-percu .box .prcs h2 {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-percu .box:hover .prcs h2 {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 5px #fff;
+}
+
+/* ============= AHORRO ============== */
+.catalogo-percu .box .prcs .ahorro {
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    padding: 6px;
+    font-size: 11px;
+    transform: translateY(200px);
+    color: transparent;
+    border-radius: 5px;
+}
+.catalogo-percu .box:hover .prcs .ahorro {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    width: 80px;
+    background: #f53232;
+    color: #fff;
+    box-shadow: 0px 2px 10px #f53232;
+}
+
+/* ============= VALOR EN PESOS ============== */
+.catalogo-percu .box .prcs .pesos {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-percu .box:hover .prcs .pesos {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= VALOR ANTERIOR ============== */
+.catalogo-percu .box .prcs .antr {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-percu .box:hover .prcs .antr {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #d4d0d0;
+}
+
+/* ============= MARCA DE BATERIAS ============== */
+.catalogo-percu .box .prcs .marca {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding: 10px;
+    letter-spacing: 2px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalogo-percu .box:hover .prcs .marca {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+    opacity: 1;
+}
+
+/* ============= DESCRIPCION PRODUCTO ============ */
+.catalogo-percu .box .prcs .dcrp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalogo-percu .box:hover .prcs .dcrp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= DISPONIBLE ============== */
+.catalogo-percu .box .prcs .disp{
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+    
+}
+.catalogo-percu .box:hover .prcs .disp{
+    color: #20ff03;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    text-decoration: none;
+    text-shadow: 1px 0px 7px #20ff03;
+}
+
+/* ============= NO DISPONIBLE ============== */
+.catalogo-percu .box .prcs .nodisp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+}
+.catalogo-percu .box:hover .prcs .nodisp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #dd9269;
+    text-shadow: 1px 0px 7px #fd5e08;
+}
+
+/* ========== TEXT BATERIAS ========== */
+#catalg-bater {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.bater {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.bater:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXT PERCUSION ========== */
+#catalg-percuf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.folclor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.folclor:hover {
+    transform: scaleY(1.2);
+}
+
+/* ================================================= */
+/* =============== INS TECLADOS =============== */
+.catalogo-tecla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin-top: 40px;
+    /* background: #20ff03; */
+}
+.catalogo-tecla .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: transparent;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #434343;
+}
+.catalogo-tecla:hover .box {
+    transform: rotateY(25deg);
+}
+.catalogo-tecla .box:hover ~ .box{
+    transform: rotateY(-25deg);
+}
+.catalogo-tecla .box:hover {
+    transform: rotateY(0deg) scale(1.2);
+    z-index: 1;
+    box-shadow: 0 25px 40px #00000080;
+}
+.catalogo-tecla .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+/* =========== COLOR DE TARJETA ======== */
+.catalogo-tecla .box .imgBx:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(180deg, #ce5b0e8f, #282828);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+    border-radius: 17px;
+}
+
+.catalogo-tecla .box:hover .imgBx:before {
+    opacity: 1;
+}
+
+/* ============= CONTENEDOR IMAGEN ============== */
+.catalogo-tecla .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 17px;
+    /* object-fit: cover; */
+}
+
+.catalogo-tecla .box .prcs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+/* ============= INFORMACION ============== */
+.catalogo-tecla .box .prcs .info-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ce590ba3;
+    color: #fff;
+    text-shadow: 0 3px 5px #51403398;
+    width: 90px;
+    height: 8px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+    font-size: 6px;
+    padding: 10px;
+    border-radius: 15px 0px 15px 0px;
+    transform: translateY(200px);
+    box-shadow: 0 5px 5px #51403398;
+}
+
+.catalogo-tecla .box:hover .prcs .info-a {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+/* ============= PRODUCTO ============== */
+.catalogo-tecla .box .prcs h2 {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-tecla .box:hover .prcs h2 {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 5px #fff;
+}
+
+/* ============= AHORRO ============== */
+.catalogo-tecla .box .prcs .ahorro {
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    padding: 6px;
+    font-size: 11px;
+    transform: translateY(200px);
+    color: transparent;
+    border-radius: 5px;
+}
+.catalogo-tecla .box:hover .prcs .ahorro {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    width: 80px;
+    background: #f53232;
+    color: #fff;
+    box-shadow: 0px 2px 10px #f53232;
+}
+
+/* ============= VALOR EN PESOS ============== */
+.catalogo-tecla .box .prcs .pesos {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-tecla .box:hover .prcs .pesos {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= VALOR ANTERIOR ============== */
+.catalogo-tecla .box .prcs .antr {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalogo-tecla .box:hover .prcs .antr {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #d4d0d0;
+}
+
+/* ============= MARCA DE GUITARRA ============== */
+.catalogo-tecla .box .prcs .marca {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding: 10px;
+    letter-spacing: 2px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalogo-tecla .box:hover .prcs .marca {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+    opacity: 1;  
+}
+
+/* ============= DESCRIPCION PRODUCTO ============ */
+.catalogo-tecla .box .prcs .dcrp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalogo-tecla .box:hover .prcs .dcrp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= DISPONIBLE ============== */
+.catalogo-tecla .box .prcs .disp{
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+    
+}
+.catalogo-tecla .box:hover .prcs .disp{
+    color: #20ff03;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    text-decoration: none;
+    text-shadow: 1px 0px 7px #20ff03;
+}
+
+/* ============= NO DISPONIBLE ============== */
+.catalogo-tecla .box .prcs .nodisp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+}
+.catalogo-tecla .box:hover .prcs .nodisp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #dd9269;
+    text-shadow: 1px 0px 7px #fd5e08;
+}
+/* ========== TEXT ACORDEON ========== */
+#catalg-acordeon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.acordeon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.acordeon:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO CONTROLADORES ========== */
+#catalg-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.controls:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO PIANOS ========== */
+#catalg-piano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.pianos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.pianos:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO SINTETIZADOR ========== */
+#catalg-sinteti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.sintet  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.sintet:hover {
+    transform: scaleY(1.2);
+}
+
+/* ================================================== */
+/* ================ ACCESORIOS ================ */
+
+.catalg-acces {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin-top: 40px;
+    /* background: #20ff03; */
+}
+
+.catalg-acces .box {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background: transparent;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #434343;
+}
+.catalg-acces:hover .box {
+    transform: rotateY(25deg);
+}
+.catalg-acces .box:hover ~ .box{
+    transform: rotateY(-25deg);
+}
+.catalg-acces .box:hover {
+    transform: rotateY(0deg) scale(1.2);
+    z-index: 1;
+    box-shadow: 0 25px 40px #00000080;
+}
+.catalg-acces .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+/* =========== COLOR DE TARJETA ======== */
+.catalg-acces .box .imgBx:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(180deg, #ce5b0e8f, #282828);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+    border-radius: 17px;
+}
+
+.catalg-acces .box:hover .imgBx:before {
+    opacity: 1;
+}
+
+/* ============= CONTENEDOR IMAGEN ============== */
+.catalg-acces .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    border-radius: 17px;
+    /* object-fit: cover; */
+}
+
+.catalg-acces .box .prcs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+/* ============= INFORMACION ============== */
+.catalg-acces .box .prcs .info-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ce590ba3;
+    color: #fff;
+    text-shadow: 0 3px 5px #51403398;
+    width: 90px;
+    height: 8px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+    font-size: 6px;
+    padding: 10px;
+    border-radius: 15px 0px 15px 0px;
+    transform: translateY(200px);
+    box-shadow: 0 5px 5px #51403398;
+}
+
+.catalg-acces .box:hover .prcs .info-a {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+/* ============= PRODUCTO ============== */
+.catalg-acces .box .prcs h2 {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalg-acces .box:hover .prcs h2 {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 5px #fff;
+}
+
+/* ============= AHORRO ============== */
+.catalg-acces .box .prcs .ahorro {
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    padding: 6px;
+    font-size: 11px;
+    transform: translateY(200px);
+    color: transparent;
+    border-radius: 5px;
+
+}
+.catalg-acces .box:hover .prcs .ahorro {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    width: 80px;
+    background: #f53232;
+    color: #fff;
+    box-shadow: 0px 2px 10px #f53232;
+}
+
+/* ============= VALOR EN PESOS ============== */
+.catalg-acces .box .prcs .pesos {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalg-acces .box:hover .prcs .pesos {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= VALOR ANTERIOR ============== */
+.catalg-acces .box .prcs .antr {
+    color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 10px;
+    transform: translateY(200px);
+}
+.catalg-acces .box:hover .prcs .antr {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #d4d0d0;
+}
+
+/* ============= MARCA DE GUITARRA ============== */
+.catalg-acces .box .prcs .marca {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding: 10px;
+    letter-spacing: 2px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalg-acces .box:hover .prcs .marca {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+    opacity: 1;   
+}
+
+/* ============= DESCRIPCION PRODUCTO ============ */
+.catalg-acces .box .prcs .dcrp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    transform: translateY(200px);
+    text-decoration: none;
+    opacity: 0;
+}
+.catalg-acces .box:hover .prcs .dcrp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    opacity: 1;
+    color: #fff;
+    text-shadow: 1px 0px 10px #fff;
+}
+
+/* ============= DISPONIBLE ============== */
+.catalg-acces .box .prcs .disp{
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+    
+}
+.catalg-acces .box:hover .prcs .disp{
+    color: #20ff03;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    text-decoration: none;
+    text-shadow: 1px 0px 7px #20ff03;
+}
+
+/* ============= NO DISPONIBLE ============== */
+.catalg-acces .box .prcs .nodisp {
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 5px;
+    transform: translateY(200px);
+}
+.catalg-acces .box:hover .prcs .nodisp {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    color: #dd9269;
+    text-shadow: 1px 0px 7px #fd5e08;
+}
+
+/* ======== TEXTO ACCESORIOS BATERIA ======== */
+#catalg-acces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.accebat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.accebat:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========= TEXTO ACCESORIOS CUERDA ======== */
+#catalg-cuerda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.accecuer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.accecuer:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO ACCESORIOS PIANO ======== */
+#catalg-teclado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.accepiano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.accepiano:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO ACCESORIOS AUDIO ========= */
+#catalg-audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.acceaud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.acceaud:hover {
+    transform: scaleY(1.2);
+}
+
+/* ========== TEXTO ACCESORIOS CABLES ======== */
+#catalg-cables {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+.accecab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.accecab:hover {
+    transform: scaleY(1.2);
+}
+
+/* ============================================ */
+/* =============== SALAS ENSAYO =============== */
+.catalg-ensayo {
+    background: transparent;
+}
+.catalg-ensayo h2 {
+    color: #fff;
+}
+/* ============================================ */
+/* ============ TEXTO SALAS ENSAYO ============ */
+#catalg-ensayo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+.ensayo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #635041a1;
+    width: 90%;
+    height: 70px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 5px #6c2c00;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+.ensayo:hover {
+    transform: scaleY(1.2);
+}
+
+/* ============================================ */
+/* ============= MAPA SALAS ENSAYO ============ */
+.catal-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    height: 500px;
+    margin: auto;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+/* ============================================ */
+/* =================== FOOTER ================= */
+footer {
+    background: transparent;
+	padding: 0;
+    box-shadow: 0px 0px 10px #49453faa;
+}
+#informs {
+	display: flex;
+	background: #f6f5f4b6;
+	height: 40%;
+	padding: 5px;
+	justify-content: space-around;
+}
+#informs h1 {
+    color: #6c2c00;
+    padding: 0px;
+    font-size: 2rem;
+    text-shadow: 0px 0px 10px #49453faa;
+}
+#enlaces {
+	font-size: .9rem;
+	padding: 0px;
+	color: #6c2c00;
+    text-decoration: none;
+}
+#articulo-1 {
+	text-align: start;
+	margin: 20px;
+	padding: 5px;
+	font-size: 0.5em;
+	width: 240px;
+    background: transparent;
+}
+
+#articulo-2 {
+	text-align: start;
+	margin: 20px;
+	padding: 5px;
+	font-size: 0.5em;
+	width: 240px;
+    background: transparent;
+}
+#articulo-3 {
+	text-align: start;
+	margin: 20px;
+	padding: 5px;
+	font-size: 0.5em;
+	width: 240px;
+	background: transparent;
+}
+#articulo-4 {
+	text-align: start;
+	margin: 20px;
+	padding: 5px;
+	font-size: 0.5em;
+	width: 240px;
+	background: transparent;
+}
+#articulo-4 a {
+    text-decoration: none;
+    color: #6c2c00;
+}
+
+/* ============================================= */
+/* ================ REDES SOCIALES ============= */
+#sociales {
+    background: #f6f5f4b6;
+    width: 100%;
+    height: 150px;
+    padding: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.redesS {
+    width: 300px;
+    position: relative;
+
+}
+.redesS .card {
+    position: relative;
+    width: 60px;
+    height: 50px;
+}
+.redesS .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.redesS .card .face.face1 {
+    /* background: #20ff03; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    transform-origin: bottom;
+}
+.redesS .card:hover .face.face1 {
+    transform: translateY(-100%) rotateX(90deg);
+    background: transparent;
+}
+#icons {
+    color: #fff;
+    opacity: 0;
+    transition: .5s ease;
+}
+#icons:hover {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* ============================================ */
+/* ================= FACEBOOK ================= */
+.redesS .card .face.face2 {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    top: 5px;
+    left: 10px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+.redesS .card:hover .face.face2 {
+    transform: translateY(0) rotateX(0deg);
+}
+.centent a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+    background: transparent;
+    border: .2rem solid #176cf4;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.centent a:hover {
+    background: linear-gradient(45deg, #e7effe, #176cf4);
+    box-shadow: 0 0 1rem #176cf4;
+}
+
+/* ============================================= */
+/* ================= INSTAGRAM ================= */
+.redesS .card .face.face2-2 {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    top: 5px;
+    left: 10px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+.redesS .card:hover .face.face2-2 {
+    transform: translateY(0) rotateX(0deg);
+}
+.centent2 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+    background: transparent;
+    border: .2rem solid #d70675;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.centent2 a:hover {
+    background: linear-gradient(45deg,#fa2898, #6140f2);
+    box-shadow: 0 0 1rem #d70675;
+}
+
+/* ============================================ */
+/* ================= WHATSAPP ================= */
+.redesS .card .face.face2-3 {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    top: 5px;
+    left: 13px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+.redesS .card:hover .face.face2-3 {
+    transform: translateY(0) rotateX(0deg);
+}
+.centent3 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+    background: transparent;
+    border: .2rem solid #34a006;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.centent3 a:hover {
+    background: linear-gradient(45deg,#f4efef, #34a006);
+    box-shadow: 0 0 1rem #34a006;
+}
+
+/* =========================================== */
+/* ================= YOUTUBE ================= */
+.redesS .card .face.face2-4 {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    top: 5px;
+    left: 13px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+.redesS .card:hover .face.face2-4 {
+    transform: translateY(0) rotateX(0deg);
+}
+.centent4 a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+    background: transparent;
+    border: .2rem solid #f80e06;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.centent4 a:hover {
+    background: #f83e06;
+    box-shadow: 0 0 1rem #f80e06;
+}
+
+
+/* ============================================ */
+/* ================ COPYRIGHT ================= */
+.copy {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: transparent;
+    width: 40%;
+    height: 50px;
+    padding: 15px;
+    color: #954308;
+}
+
+/* ===================================== */
+/* =========== BREACKPOINTS============= */
+@keyframes scroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+	100% {
+		-webkit-transform: translateX(calc(-200px * 7));
+		transform: translateX(-200px * 7);
+	}
+}
+/* ============ NAVEGACION ============ */
+@media (min-width:768px) {
+	.navegacion {
+		flex-direction: row;
+	}
+}
+/* ============ ENLACES ============ */
+@media (min-width:768px) {
+	.enlace {
+		flex: 1;
+		position: relative;
+		overflow: visible;
+	}
+	
+	.enlace .submenu {
+		position: absolute;
+		width: 100%;	
+	}
+}
+/* ============ SUBMENU ============ */
+@media (min-width:68px) {
+	.submenu a {
+		display: none;
+		color: #fff;/*TEXTO DEL SUBMENU*/
+	}
+	.enlace:target .submenu a {
+		display: block;
+	}
+}
+

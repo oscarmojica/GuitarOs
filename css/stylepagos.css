@@ -1,0 +1,446 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+/* ============================================ */
+/* ================== BARRA DE SCROLL ================== */
+html::-webkit-scrollbar {
+  width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #d8d6d4bd;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #66554e, #e0d9d5, #66554e);
+  border-radius: 15px;
+  box-shadow: 2px 4px 4px #191919;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+  background-image: url("../img/guitars3.png");
+  /* background: linear-gradient(90deg, #dd9269 60%, #fd5e08 40.1%); */
+}
+
+.container form {
+  padding: 20px;
+  width: 700px;
+  background-image: url('../img/pentagrama.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background: #fff; */
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px 0px #453d3992;
+}
+
+.container form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.container form .row .col {
+  flex: 1 1 250px;
+}
+
+.container form .row .col .title {
+  font-size: 20px;
+  color: #a24f21;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox {
+  margin: 15px 0;
+}
+
+.container form .row .col .inputBox span {
+  margin-bottom: 10px;
+  display: block;
+  color: #a24f21;
+}
+
+.container form .row .col .inputBox input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #51403398;
+}
+
+.container form .row .col .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.container form .row .col .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 3px 3px #000);
+  border-radius: 5px;
+}
+
+.container form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: #e98854;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 0px #00000092;
+  transition: .5s;
+}
+
+.container form .submit-btn:hover {
+  background: #ff6512;
+  transform: scale(1.1);
+}
+
+#exit {
+  color: #b97048;
+  font-size: 40px;
+  transition: .5s;
+}
+
+#exit:hover {
+  transform: scale(1.2);
+  color: #a24f21;
+}
+
+#title img {
+  position: relative;
+  left: 80px;
+  top: 50px;
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(2px 2px 2px #5d5c5c);
+  transition: .5s;
+}
+
+#title img:hover {
+  transform: scale(1.2);
+}
+
+
+/* ============================================ */
+/* =================== FOOTER ================= */
+footer {
+  background: transparent;
+  padding: 0;
+  box-shadow: 0px 0px 10px #49453faa;
+}
+
+#informs {
+  display: flex;
+  background: #f6f5f4b6;
+  height: 40%;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+#informs h1 {
+  color: #6c2c00;
+  padding: 0px;
+  font-size: 2rem;
+}
+
+#enlaces {
+  font-size: 1rem;
+  padding: 0px;
+  color: #6c2c00;
+  text-decoration: none;
+}
+
+#articulo-1 {
+  text-align: start;
+  margin: 20px;
+  padding: 5px;
+  font-size: 0.5em;
+  width: 240px;
+  background: transparent;
+}
+
+#articulo-2 {
+  text-align: start;
+  margin: 20px;
+  padding: 5px;
+  font-size: 0.5em;
+  width: 240px;
+  background: transparent;
+}
+
+#articulo-3 {
+  text-align: start;
+  margin: 20px;
+  padding: 5px;
+  font-size: 0.5em;
+  width: 240px;
+  background: transparent;
+}
+
+#articulo-4 {
+  text-align: start;
+  margin: 20px;
+  padding: 5px;
+  font-size: 0.5em;
+  width: 240px;
+  background: transparent;
+}
+
+#articulo-4 a {
+  text-decoration: none;
+  color: #6c2c00;
+}
+
+/* ============================================= */
+/* ================ REDES SOCIALES ============= */
+#sociales {
+  background: #f6f5f4b6;
+  width: 100%;
+  height: 150px;
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.redesS {
+  width: 300px;
+  position: relative;
+
+}
+
+.redesS .card {
+  position: relative;
+  width: 60px;
+  height: 50px;
+}
+
+.redesS .card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.redesS .card .face.face1 {
+  /* background: #20ff03; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  transform-origin: bottom;
+}
+
+.redesS .card:hover .face.face1 {
+  transform: translateY(-100%) rotateX(90deg);
+  background: transparent;
+}
+
+#icons {
+  color: #fff;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+#icons:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+/* ============================================ */
+/* ================= FACEBOOK ================= */
+.redesS .card .face.face2 {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 5px;
+  left: 10px;
+  transform-origin: top;
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.redesS .card:hover .face.face2 {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.centent a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  text-decoration: none;
+  background: transparent;
+  border: .2rem solid #176cf4;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.centent a:hover {
+  background: linear-gradient(45deg, #e7effe, #176cf4);
+  box-shadow: 0 0 1rem #176cf4;
+}
+
+/* ============================================= */
+/* ================= INSTAGRAM ================= */
+.redesS .card .face.face2-2 {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 5px;
+  left: 10px;
+  transform-origin: top;
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.redesS .card:hover .face.face2-2 {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.centent2 a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  text-decoration: none;
+  background: transparent;
+  border: .2rem solid #d70675;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.centent2 a:hover {
+  background: linear-gradient(45deg, #fa2898, #6140f2);
+  box-shadow: 0 0 1rem #d70675;
+}
+
+/* ============================================ */
+/* ================= WHATSAPP ================= */
+.redesS .card .face.face2-3 {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 5px;
+  left: 13px;
+  transform-origin: top;
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.redesS .card:hover .face.face2-3 {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.centent3 a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  text-decoration: none;
+  background: transparent;
+  border: .2rem solid #34a006;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.centent3 a:hover {
+  background: linear-gradient(45deg, #f4efef, #34a006);
+  box-shadow: 0 0 1rem #34a006;
+}
+
+/* =========================================== */
+/* ================= YOUTUBE ================= */
+.redesS .card .face.face2-4 {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  top: 5px;
+  left: 13px;
+  transform-origin: top;
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.redesS .card:hover .face.face2-4 {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.centent4 a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  text-decoration: none;
+  background: transparent;
+  border: .2rem solid #f80e06;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+
+.centent4 a:hover {
+  background: #f83e06;
+  box-shadow: 0 0 1rem #f80e06;
+}
+
+
+/* ============================================ */
+/* ================ COPYRIGHT ================= */
+.copy {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: transparent;
+  width: 40%;
+  height: 50px;
+  padding: 15px;
+  color: #954308;
+}
